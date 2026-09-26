@@ -1,98 +1,70 @@
-# Conversor de Monedas
+# Real-Time Currency Converter
 
-Este es un programa de consola en Java que permite realizar conversiones de moneda en tiempo real utilizando datos de la API **ExchangeRate-API**. El programa puede convertir entre diversas monedas como MXN (Peso Mexicano), EUR (Euro), ARS (Peso Argentino), BRL (Real Brasileño), COP (Peso Colombiano) y USD (Dólar Estadounidense).
+![Java](https://img.shields.io/badge/Java-Console_App-ED8B00?logo=openjdk&logoColor=white)
+![REST API](https://img.shields.io/badge/REST_API-Exchange_Rates-0f172a)
+![HTTP](https://img.shields.io/badge/HTTP-Integration-2563eb)
 
-## Características
-- Obtiene las tasas de cambio actualizadas mediante la API ExchangeRate-API.
-- Realiza conversiones entre las siguientes monedas:
-  - MXN a USD
-  - MXN a EUR
-  - ARS a USD
-  - BRL a USD
-  - COP a USD
-- Permite una interfaz sencilla con opciones para el usuario.
+Aplicación de consola desarrollada en **Java** para realizar conversiones monetarias utilizando tasas de cambio obtenidas desde una API externa en tiempo real.
 
----
+## Funcionalidades
 
-## Requisitos
-- **Java JDK 8** o superior.
-- Conexión a Internet para obtener las tasas de cambio.
+- Consulta tasas de cambio mediante HTTP.
+- Conversión entre MXN, EUR, ARS, BRL, COP y USD.
+- Menú interactivo por consola.
+- Manejo básico de errores de conexión.
+- Separación entre obtención de datos y lógica de conversión.
 
----
+## Tecnologías
 
-## Instalación y Ejecución
+- Java
+- `HttpURLConnection`
+- Entrada por consola con `Scanner`
+- Consumo de API REST
 
-1. **Clona o descarga el repositorio**:
-   ```bash
-   git clone https://github.com/usuario/conversor-monedas.git
-   cd conversor-monedas
-   ```
+## Flujo de la aplicación
 
-2. **Compila el archivo Java**:
-   ```bash
-   javac ConversorMonedas.java
-   ```
-
-3. **Ejecuta el programa**:
-   ```bash
-   java ConversorMonedas
-   ```
-
----
-
-## Funcionamiento
-
-El programa presenta un menú con las siguientes opciones:
-
-1. **Convertir de MXN a USD**
-2. **Convertir de MXN a EUR**
-3. **Convertir de ARS a USD**
-4. **Convertir de BRL a USD**
-5. **Convertir de COP a USD**
-6. **Salir**
-
-**Ejemplo de salida:**
-```
-*** Conversor de Monedas ***
-1. Convertir de MXN a USD
-2. Convertir de MXN a EUR
-3. Convertir de ARS a USD
-4. Convertir de BRL a USD
-5. Convertir de COP a USD
-6. Salir
-Elige una opción: 1
-
-Ingresa la cantidad en MXN: 100
-100.00 MXN equivalen a 5.00 USD
+```text
+Usuario
+  ↓
+Menú de conversión
+  ↓
+Consulta de tasas vía HTTP
+  ↓
+Cálculo de conversión
+  ↓
+Resultado en consola
 ```
 
----
+## Ejecución
 
-## Estructura del Código
+```bash
+git clone https://github.com/Luisf2020/conversor-monedas.git
+cd conversor-monedas/ConversorMonedas/src
+javac ConversorMonedas.java
+java ConversorMonedas
+```
 
-- **`main`**: Controla la lógica principal y el menú de opciones.
-- **`getExchangeRates`**: Realiza una petición GET a la API y extrae las tasas de cambio necesarias.
+## Aspectos técnicos demostrados
 
----
+- Integración con servicios externos.
+- Consumo de datos en tiempo real.
+- Programación imperativa en Java.
+- Manejo de entrada/salida.
+- Diseño de flujo interactivo por consola.
 
-## API Utilizada
-- **ExchangeRate-API**: [https://api.exchangerate-api.com](https://api.exchangerate-api.com)
+## Posibles mejoras
 
-Asegúrate de que el servidor de la API esté disponible y tu conexión a Internet funcione correctamente.
-
----
-
-## Mejoras Futuras
-- Agregar más opciones de conversión de monedas.
-- Mejorar la visualización con una interfaz gráfica.
-- Manejo de errores más robusto para respuestas de la API.
-
----
+- Migrar a `HttpClient` moderno.
+- Parsear JSON con una biblioteca especializada.
+- Añadir más pares de monedas.
+- Incorporar pruebas unitarias.
+- Crear una interfaz web o de escritorio.
 
 ## Autor
-- **[Tu Nombre]** - Desarrollador del proyecto.
+
+**Luis Felipe Zuniga León**  
+Ingeniería de Sistemas · Desarrollo de Software · Full Stack
 
 ---
 
-## Licencia
-Este proyecto está bajo la licencia MIT. Consulta el archivo **LICENSE** para más detalles.
+Proyecto de portafolio orientado a integración de APIs y fundamentos de Java.
