@@ -1,70 +1,73 @@
-# Real-Time Currency Converter
+# Conversor de monedas en tiempo real
 
-![Java](https://img.shields.io/badge/Java-Console_App-ED8B00?logo=openjdk&logoColor=white)
-![REST API](https://img.shields.io/badge/REST_API-Exchange_Rates-0f172a)
-![HTTP](https://img.shields.io/badge/HTTP-Integration-2563eb)
+![stack: Java](https://img.shields.io/badge/stack--Java-0d9488?style=flat-square) ![stack: REST API](https://img.shields.io/badge/stack--REST%20API-0d9488?style=flat-square) ![stack: JSON](https://img.shields.io/badge/stack--JSON-0d9488?style=flat-square) ![IA: asistido](https://img.shields.io/badge/IA--asistido-6366f1?style=flat-square)
 
-Aplicación de consola desarrollada en **Java** para realizar conversiones monetarias utilizando tasas de cambio obtenidas desde una API externa en tiempo real.
+Conversor de divisas que obtiene tasas de cambio actualizadas desde una API REST.
 
-## Funcionalidades
+**Tipo:** Aplicacion de consola (Java) · **Complejidad:** Principiante
 
-- Consulta tasas de cambio mediante HTTP.
-- Conversión entre MXN, EUR, ARS, BRL, COP y USD.
-- Menú interactivo por consola.
-- Manejo básico de errores de conexión.
-- Separación entre obtención de datos y lógica de conversión.
+## Problema que resuelve
 
-## Tecnologías
+Convertir importes entre divisas sin consultar manualmente el tipo de cambio, que cambia a diario.
+
+## Solucion implementada
+
+Aplicacion Java que consulta las tasas por HTTP, las parsea y ofrece un menu para elegir divisas y convertir el importe.
+
+### Funcionalidades principales
+
+- Consulta de tasas por HTTP (HttpURLConnection)
+- Conversion entre MXN, EUR, ARS, BRL, COP y USD
+- Menu interactivo por consola
+- Manejo de errores de conexion y de entrada
+
+## Stack
 
 - Java
-- `HttpURLConnection`
-- Entrada por consola con `Scanner`
-- Consumo de API REST
+- REST API
+- JSON
 
-## Flujo de la aplicación
+## Estructura
 
-```text
-Usuario
-  ↓
-Menú de conversión
-  ↓
-Consulta de tasas vía HTTP
-  ↓
-Cálculo de conversión
-  ↓
-Resultado en consola
+```
+ConversorMonedas/
+  src/ConversorMonedas.java   # consulta, parseo y menu
+  ConversorMonedas.iml
 ```
 
-## Ejecución
+## Puesta en marcha
 
 ```bash
-git clone https://github.com/Luisf2020/conversor-monedas.git
-cd conversor-monedas/ConversorMonedas/src
-javac ConversorMonedas.java
-java ConversorMonedas
+# Requiere JDK 17+
+javac ConversorMonedas/src/ConversorMonedas.java -d out
+java -cp out ConversorMonedas
 ```
 
-## Aspectos técnicos demostrados
+## Complejidad del proyecto
 
-- Integración con servicios externos.
-- Consumo de datos en tiempo real.
-- Programación imperativa en Java.
-- Manejo de entrada/salida.
-- Diseño de flujo interactivo por consola.
+**Nivel: Principiante** — Programa de consola con una integracion HTTP y parseo de respuesta.
 
-## Posibles mejoras
+El nivel describe la complejidad tecnica del proyecto, no el grado de dominio de quien lo escribio.
 
-- Migrar a `HttpClient` moderno.
-- Parsear JSON con una biblioteca especializada.
-- Añadir más pares de monedas.
-- Incorporar pruebas unitarias.
-- Crear una interfaz web o de escritorio.
+## Despliegue
+
+Aplicacion de consola; no genera una pagina web.  
+El codigo fuente esta disponible en este repositorio.
+
+## Transparencia sobre IA
+
+Este proyecto se desarrollo con asistencia de inteligencia artificial (generacion de codigo,
+revision y documentacion). El codigo fue leido, ejecutado y probado manualmente. No se declaran
+clientes, metricas ni resultados que no puedan verificarse.
 
 ## Autor
 
-**Luis Felipe Zuniga León**  
-Ingeniería de Sistemas · Desarrollo de Software · Full Stack
+**Luis Felipe Zuniga Leon** — Desarrollador de software asistido por IA
+
+- GitHub: <https://github.com/Luisf2020>
+- Correo: developerluis2@gmail.com
+- WhatsApp: +504 3237 0056
 
 ---
 
-Proyecto de portafolio orientado a integración de APIs y fundamentos de Java.
+_Proyecto de portafolio. El desarrollo se apoyo en herramientas de IA bajo revision tecnica humana._
